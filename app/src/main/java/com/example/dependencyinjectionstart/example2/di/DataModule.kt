@@ -6,7 +6,9 @@ import com.example.dependencyinjectionstart.example2.data.datasource.ExampleRemo
 import com.example.dependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
+import dagger.hilt.migration.DisableInstallInCheck
 
+@DisableInstallInCheck
 @Module
 interface DataModule {
 

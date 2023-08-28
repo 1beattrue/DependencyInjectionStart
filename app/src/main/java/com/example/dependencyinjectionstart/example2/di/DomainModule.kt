@@ -4,7 +4,9 @@ import com.example.dependencyinjectionstart.example2.data.repository.ExampleRepo
 import com.example.dependencyinjectionstart.example2.domain.ExampleRepository
 import dagger.Binds
 import dagger.Module
+import dagger.hilt.migration.DisableInstallInCheck
 
+@DisableInstallInCheck
 @Module
 interface DomainModule {
 

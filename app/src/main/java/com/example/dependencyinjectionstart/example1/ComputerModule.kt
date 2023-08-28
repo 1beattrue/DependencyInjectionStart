@@ -2,7 +2,9 @@ package com.example.dependencyinjectionstart.example1
 
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.migration.DisableInstallInCheck
 
+@DisableInstallInCheck
 @Module
 class ComputerModule {
 
