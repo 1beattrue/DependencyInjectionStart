@@ -7,11 +7,12 @@ import com.example.dependencyinjectionstart.example2.domain.ExampleUseCase
 import javax.inject.Inject
 
 class ExampleViewModel2 @Inject constructor(
-    private val repository: ExampleRepository
+    private val repository: ExampleRepository,
+    private val id: String
 ) : ViewModel() {
 
     fun method() {
         repository.method()
-        Log.d("ExampleViewModel", "$this")
+        Log.d("ExampleViewModel", "$this, $id")
     }
 }
