@@ -5,14 +5,16 @@ import androidx.lifecycle.ViewModel
 import com.example.dependencyinjectionstart.example2.domain.ExampleRepository
 import com.example.dependencyinjectionstart.example2.domain.ExampleUseCase
 import javax.inject.Inject
+import javax.inject.Named
 
 class ExampleViewModel2 @Inject constructor(
     private val repository: ExampleRepository,
-    private val id: String
+    @Named("id") private val id: String,
+    @Named("name") private val name: String
 ) : ViewModel() {
 
     fun method() {
         repository.method()
-        Log.d("ExampleViewModel", "$this, $id")
+        Log.d("ExampleViewModel2", "$this, $id, $name")
     }
 }
